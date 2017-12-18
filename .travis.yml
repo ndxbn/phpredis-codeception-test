@@ -57,4 +57,4 @@ before_script:
   - echo yes | ruby redis-trib.rb create --replicas 3 $(seq -f 127.0.0.1:%g 7000 7011)
   - echo 'extension = redis.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 script:
-  - composer test
+  - composer test:unit
