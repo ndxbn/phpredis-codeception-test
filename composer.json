@@ -4,10 +4,6 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {},
-    "require-dev": {
-        "codeception/codeception": "dev-master",
-        "mockery/mockery": "^1.0@dev"
-    },
     "scripts": {
         "test": "codecept run",
         "test:unit": "codecept run unit"
