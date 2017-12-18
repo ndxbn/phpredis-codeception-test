@@ -1,18 +1,19 @@
 language: php
 
-sudo: false
-
 php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
   - 7.0
   - 7.1
+  - 7.2
   - nightly
 
-cache:
-  directories:
-    - $HOME/.composer/cache
-
 before_script:
-  - composer install --prefer-dist
+  - pecl install redis
+  # some latest package cannot run on PHP5
+  - composer install codeception/codeception
+  - composer install mockery/mockery
 
 script: composer test
-
