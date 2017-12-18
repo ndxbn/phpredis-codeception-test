@@ -45,8 +45,8 @@ before_install:
   - cd ..
 install:
   # some latest package cannot run on PHP5
-  - composer install codeception/codeception
-  - composer install mockery/mockery
+  - composer require --dev codeception/codeception
+  - composer require --dev mockery/mockery
 
 before_script:
   - gem install redis
