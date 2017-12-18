@@ -44,6 +44,8 @@ before_install:
   - make install
   - cd ..
 install:
+  # in php5.3, composer needs huge memory
+  - phpenv config-add .travis.d/memory.ini
   # some latest package cannot run on PHP5
   - composer install
 
