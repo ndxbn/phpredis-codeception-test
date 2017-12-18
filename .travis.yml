@@ -41,9 +41,9 @@ before_install:
   - phpize
   - pecl install igbinary
   - ./configure --enable-redis-igbinary --enable-redis-lzf CFLAGS=-Wall
-install:
-  # phpredis
   - make install
+  - cd ..
+install:
   # some latest package cannot run on PHP5
   - composer install codeception/codeception
   - composer install mockery/mockery
