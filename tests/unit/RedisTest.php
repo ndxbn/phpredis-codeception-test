@@ -10,7 +10,7 @@ class RedisSegmentationFaultTest extends Unit
 {
     public function setUp()
     {
-        Mockery::mock(Redis::class);
+        Mockery::mock(\Redis);
     }
 
     public function testExample()
