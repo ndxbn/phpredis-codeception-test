@@ -11,29 +11,17 @@ php:
   - 7.1
   - 7.2
   - nightly
-env: CC=gcc
 
-matrix:
-  allow_failures:
-    - php: nightly
-  include:
-    - php: 5.4
-      env: CC=clang
-    - php: 5.5
-      env: CC=clang
-    - php: 5.6
-      env: CC=clang
-    - php: 7.0
-      env: CC=clang
-    - php: 7.1
-      env: CC=clang
-    - php: 7.2
-      env: CC=clang
+env:
+  - CC=gcc
+  - CC=clang
 
+#
 addons:
   apt:
     packages: clang
 
+#
 before_install:
   # phpredis
   - git clone --recursive https://github.com/phpredis/phpredis
