@@ -1,5 +1,7 @@
 paths:
     tests: tests
+    log: tests/_log
+    helpers: tests/_support/Helper
     output: tests/_output
     data: tests/_data
     support: tests/_support

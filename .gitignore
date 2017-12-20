@@ -1,1 +1,9 @@
+!.gitkeep
+!.gitignore
+
+# composer
 vendor/
+
+# This repository should be run on some PHP version (includes old PHP)
+# If exist composer.lock, some old PHP test will be broken, because some library are not support old PHP.
+composer.lock
