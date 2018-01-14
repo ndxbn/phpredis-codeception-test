@@ -17,6 +17,9 @@ env:
 matrix:
   allow_failures:
     - php: nightly
+      env:  CC=gcc
+    - php: nightly
+      env:  CC=clang
 
 #
 addons:
